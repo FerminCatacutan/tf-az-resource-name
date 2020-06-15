@@ -1,5 +1,5 @@
 module "sa_name" {
-  source      = "./../../"
+  source      = "./../../_modules/resource-name"
   name        = "mystorageaccount"
   environment = "dev"
   locations   = ["westus"]

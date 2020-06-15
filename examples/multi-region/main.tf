@@ -1,5 +1,5 @@
 module "rg_names" {
-  source      = "./../../"
+  source      = "./../../_modules/resource-name"
   name        = "myrg"
   environment = "dev"
   locations   = ["westus", "westus2"]
