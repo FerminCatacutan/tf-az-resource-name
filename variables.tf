@@ -1,5 +1,5 @@
 variable "environment" {
-  description = "(Required) The environment of the resource. Appended at the end of the \"calculated\" name."
+  description = "(Required) Specifies the environment of the resource. Appended at the end of the \"calculated\" name."
   type        = string
   validation {
     condition     = length(var.environment) > 1 && length(var.environment) < 5
@@ -8,7 +8,7 @@ variable "environment" {
 }
 
 variable "locations" {
-  description = "(Required) The Locations of the resource. Appended after `name`."
+  description = "(Required) Specifies the location(s) of the resource. Appended after `name`."
   type        = list(string)
   validation {
     condition     = length(var.locations) > 0
@@ -17,7 +17,7 @@ variable "locations" {
 }
 
 variable "name" {
-  description = "(Required) The name used for the resource."
+  description = "(Required) Specifies the name used for the resource."
   type        = string
   validation {
     condition     = length(var.name) > 0
@@ -27,6 +27,6 @@ variable "name" {
 
 variable "separator" {
   type        = string
-  description = "(Optional) The string separating the values in the `name` of the resource. Defaults to `-`."
+  description = "(Optional) Specifies the string separating the values in the `name` of the resource. Defaults to `-`."
   default     = "-"
 }
