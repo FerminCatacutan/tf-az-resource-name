@@ -6,7 +6,7 @@ locals {
     ]
     : [
       for location in var.locations :
-      format("%s%s%s%s%s", var.name, var.separator, location, var.separator, var.environment)
+      format("%s%s%s%s%s", var.name, var.separator, replace(lower(location), " ", ""), var.separator, var.environment)
     ]
   )
 }
