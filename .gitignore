@@ -30,3 +30,6 @@ override.tf.json
 *tfplan*
 
 **.terraform-version
+
+# VS Code customization
+**/.vscode/*
